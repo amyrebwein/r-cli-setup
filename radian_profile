@@ -1,0 +1,6 @@
+options(radian.auto_match = TRUE)          # closes brackets and quotes
+options(radian.editing_mode = "vi")        # same keys as your zsh vi-mode
+options(radian.escape_key_map = list(
+  list(key = "-", value = " <- "),         # Alt+-  inserts  <-
+  list(key = "m", value = " |> ")          # Alt+m  inserts  |>
+))
