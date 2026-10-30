@@ -1,0 +1,155 @@
+# Conda environment for R work: terminal-only (radian), conda-forge only.
+# Rebuild: conda env create -f environment.yml
+# Then install the documented exceptions in r-extras.txt.
+# Rule: add packages with `conda install -c conda-forge r-<name>` AND a line here.
+name: r_env
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # R itself and the terminal REPL
+  - r-base=4.5
+  - radian
+  - r-languageserver
+  # Package development (medexhibit)
+  - r-devtools
+  - r-usethis
+  - r-testthat
+  - r-roxygen2
+  - r-lintr
+  - r-styler
+  - r-covr
+  - r-pkgdown
+  - r-vdiffr
+  # Tidyverse and data import
+  - r-tidyverse
+  - r-readxl
+  - r-haven
+  - r-here
+  - r-janitor
+  - r-scales
+  # Textbook chapters 4 to 8 and the guides' extensions
+  - r-gapminder
+  - r-gtsummary
+  - r-gt
+  - r-flextable
+  - r-broom
+  - r-ggally
+  - r-ggpubr
+  - r-patchwork
+  - r-proc
+  - r-dbplyr
+  - r-rsqlite
+  # Likely needed by later textbook chapters (survival, missing data)
+  - r-survival
+  - r-survminer
+  - r-flexsurv
+  - r-mice
+  - r-naniar
+  - r-vim
+  - r-visdat
+  # Previously installed in r_env (kept so nothing you use breaks)
+  - r-essentials
+  - r-svglite
+  - r-irkernel
+  - jupyterlab
+  - matplotlib
+  - cookiecutter
+  # Previously installed with install.packages(); now from conda (some are only dependencies, harmless)
+  - r-abind
+  - r-aod
+  - r-bbmle
+  - r-bdsmatrix
+  - r-bibtex
+  - r-biglm
+  - r-bookdown
+  - r-brio
+  - r-broom.helpers
+  - r-cardata
+  - r-checkmate
+  - r-corrplot
+  - r-cowplot
+  - r-crosstalk
+  - r-deming
+  - r-deoptimr
+  - r-deriv
+  - r-desc
+  - r-desolve
+  - r-diffobj
+  - r-doby
+  - r-dt
+  - r-exactranktests
+  - r-fastghquad
+  - r-forecast
+  - r-formula
+  - r-fracdiff
+  - r-ggrepel
+  - r-ggsci
+  - r-ggsignif
+  - r-ggstats
+  - r-ggthemes
+  - r-gparotation
+  - r-gridextra
+  - r-hmisc
+  - r-htmltable
+  - r-jpeg
+  - r-kableextra
+  - r-labelled
+  - r-laeken
+  - r-lmtest
+  - r-lsoda
+  - r-matrixmodels
+  - r-maxstat
+  - r-mcr
+  - r-miniui
+  - r-minqa
+  - r-mnormt
+  - r-mstate
+  - r-muhaz
+  - r-multcomp
+  - r-mvtnorm
+  - r-norm
+  - r-ordinal
+  - r-palmerpenguins
+  - r-pan
+  - r-pkgbuild
+  - r-pkgload
+  - r-polspline
+  - r-polynom
+  - r-praise
+  - r-psych
+  - r-quadprog
+  - r-quantreg
+  - r-ranger
+  - r-rbibutils
+  - r-r.cache
+  - r-rcpparmadillo
+  - r-rdpack
+  - r-refmanager
+  - r-reformulas
+  - r-remotes
+  - r-rex
+  - r-r.methodss3
+  - r-rms
+  - r-robslopes
+  - r-robustbase
+  - r-r.oo
+  - r-rstpm2
+  - r-rticles
+  - r-r.utils
+  - r-sandwich
+  - r-shinyjs
+  - r-sp
+  - r-sparsem
+  - r-speedglm
+  - r-statmod
+  - r-th.data
+  - r-ucminf
+  - r-upsetr
+  - r-urca
+  - r-vcd
+  - r-vgam
+  - r-viridis
+  - r-waldo
+  - r-xgboost
+  - r-xmlparsedata

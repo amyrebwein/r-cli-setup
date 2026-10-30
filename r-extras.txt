@@ -1,0 +1,16 @@
+# R packages not on conda-forge. Install AFTER `conda env create -f environment.yml`,
+# from inside R in the activated env, with dependencies coming from conda only:
+#
+#   utils::install.packages(c("epiDisplay", "SurvRegCensCov"), dependencies = FALSE)
+#
+# If a dependency is reported missing: `conda install -c conda-forge r-<name>`,
+# add it to environment.yml, then rerun the line above.
+
+epiDisplay       # epidemiology tables (textbook, later chapters)
+SurvRegCensCov   # Weibull AFT -> hazard ratio conversion (textbook, survival chapters)
+
+# Dropped (not needed):
+#   citr               RStudio-only citation add-in
+#   LogisticDx         replaced by own auc()/hosmer_lemeshow() and r-proc
+#   ResourceSelection  not on conda-forge; hosmer_lemeshow() comparison test skips without it
+#   pak                installer that bypasses conda
